@@ -1,0 +1,13 @@
+<div>
+  <h3>Ações que sofreram alterações na data de hoje</h3>
+</div>
+<div class="container">
+
+  <ng-container *ngIf=" !stocks.length  ">
+    <h3>Não há alterações disponiveis no dia de hoje</h3>
+  </ng-container>
+
+  <ng-container #elseDone>
+  <app-stock-card *ngFor="let stock of stocks" [stock]="stock"></app-stock-card>
+  </ng-container>
+</div>

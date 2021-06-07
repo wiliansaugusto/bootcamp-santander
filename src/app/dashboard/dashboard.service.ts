@@ -6,11 +6,16 @@ import Stock from '../shared/models/stock-model';
   providedIn: 'root'
 })
 export class DashboardService {
-readonly baseUrl = "http://bootcamp-dio-santander-willian.herokuapp.com/bootcamp/";
+
+readonly baseUrl = "https://bootcamp-dio-santander-willian.herokuapp.com/bootcamp";
   constructor(private http:HttpClient) { }
 
   async getStocks():Promise<Stock[]>{
     return this.http.get<Stock[]>(`${this.baseUrl}/stock`).toPromise();
+  }
+  async getStocksHoje(): Promise<Stock[]> {
+    return this.http.get<Stock[]>(`${this.baseUrl}/stock/today`).toPromise();
+
   }
 }
 
