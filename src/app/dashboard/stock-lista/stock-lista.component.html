@@ -1,0 +1,21 @@
+<table class="table">
+  <thead>
+    <th colspan="5"><p>Lista de Ações - Santander Homebroker</p></th>
+  <tr >
+    <th>Ação</th>
+    <th>Preço</th>
+    <th>Variação</th>
+    <th>Data</th>
+    <th>Options</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let stock of stocks" >
+    <td>{{stock.name}}</td>
+    <td>{{stock.price}}</td>
+    <td>{{[variationStock(stock.variation)]}}</td>
+    <td>{{stock.date}}</td>
+    <td><button class="btn" (click)="deleteStock(stock.id)">Excluir</button> / editar</td>
+  </tr>
+</tbody>
+</table>

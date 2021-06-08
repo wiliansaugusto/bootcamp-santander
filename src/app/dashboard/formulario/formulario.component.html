@@ -1,0 +1,12 @@
+<form class="form" >
+  <h3>Ações</h3>
+  <label for="name">Ação</label>
+  <input type="text" required name="name" [(ngModel)]="stock.name" >
+  <label for="price">Preço</label>
+  <input type="number" required name="price" [(ngModel)]="stock.price ">
+  <label for="variation">Variação</label>
+  <input type="number" required name="variation" [(ngModel)]="stock.variation">
+  <label for="date">Data</label>
+  <input type="date" required name="date"[(ngModel)]="stock.date" >
+  <button class="btn" (click)="saveStock()">Salvar</button>
+</form>

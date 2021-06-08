@@ -1,0 +1,29 @@
+table{
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+p {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+thead th{
+  background-color:var(--secondary-color);
+  color: var(--primary-color);
+  font-size: 1.5rem;
+  padding: 0.3125rem;
+  margin: 0.625rem;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 0.5rem;
+  text-align:  center;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
