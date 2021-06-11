@@ -17,7 +17,6 @@ export class FormularioComponent implements OnInit {
   }
    async saveStock(){
     this.stocks =  await this.service.saveStock(this.stock);
-    console.log(this.stocks);
     window.location.reload();
   }
 }

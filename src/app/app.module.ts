@@ -23,7 +23,7 @@ registerLocaleData(localePt);
     SharedModule,
   ],
   providers: [
-    {provide: LOCALE_ID, useValue:'pt-BR'}
+    {provide: LOCALE_ID, useValue:'pt'}
   ],
   bootstrap: [AppComponent]
 })

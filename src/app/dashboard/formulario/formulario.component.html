@@ -1,12 +1,25 @@
-<form class="form" >
+<form class="form">
   <h3>Ações</h3>
-  <label for="name">Ação</label>
-  <input type="text" required name="name" [(ngModel)]="stock.name" >
-  <label for="price">Preço</label>
-  <input type="number" required name="price" [(ngModel)]="stock.price ">
-  <label for="variation">Variação</label>
-  <input type="number" required name="variation" [(ngModel)]="stock.variation">
-  <label for="date">Data</label>
-  <input type="date" required name="date"[(ngModel)]="stock.date" >
-  <button class="btn" (click)="saveStock()">Salvar</button>
+  <div class="dados">
+    <div class="form-group">
+      <label for="name">Ação</label>
+      <input type="text" required name="name" [(ngModel)]="stock.name">
+    </div>
+    <div class="form-group">
+      <label for="price">Preço</label>
+      <input type="number" required name="price" [(ngModel)]="stock.price ">
+    </div>
+    <div class="form-group">
+      <label for="variation">Variação</label>
+      <input type="number" required name="variation" [(ngModel)]="stock.variation">
+    </div>
+    <div class="form-group">
+      <label for="data">Data</label>
+      <input type="date" name="data" [(ngModel)]="stock.date" required>
+    </div>
+  </div>
+  <div class="btn-space">
+    <button class="btn" (click)="saveStock()">Adicionar</button>
+  </div>
+  
 </form>

@@ -26,11 +26,8 @@ export class DashboardService {
   }
    saveStock(stock:Stock):Promise <any>{
     stock.id = null;
-     let datanoram = new Date(stock.date);
-     let latest_date =this.datePipe.transform(datanoram, 'dd/MM/yyyy');
+    let latest_date =this.datePipe.transform(stock.date, "dd/MM/yyyy");
     stock.date = latest_date;
-    console.log(stock);
-
     return this.http.post(`${this.baseUrl}/stock/`,stock ).toPromise();
   }
 

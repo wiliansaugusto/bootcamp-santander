@@ -1,5 +1,5 @@
 <table class="table">
-  <thead>
+  <thead class="cabeca">
     <th colspan="5"><p>Lista de Ações - Santander Homebroker</p></th>
   <tr >
     <th>Ação</th>
@@ -15,7 +15,8 @@
     <td>{{stock.price}}</td>
     <td>{{[variationStock(stock.variation)]}}</td>
     <td>{{stock.date}}</td>
-    <td><button class="btn" (click)="deleteStock(stock.id)">Excluir</button> / editar</td>
+    <td class="btn"><button class="excluir" (click)="deleteStock(stock.id)">Excluir</button>
+       <button class="editar">Editar</button></td>
   </tr>
 </tbody>
 </table>
